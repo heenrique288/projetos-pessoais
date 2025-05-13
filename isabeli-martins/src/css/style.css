@@ -8,8 +8,8 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     background-image: linear-gradient(to bottom, #1DB954 20%, #191414 80%);
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -39,7 +39,7 @@ header > section > article > div.subtitulo {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 460px;
+    max-width: 455px;
     height: 450px;
     border-radius: 15px;
     padding: 20px;
@@ -54,7 +54,7 @@ header > section > article > div.subtitulo > div.calendario {
     border: 0.5px solid rgba(0, 0, 0, 0.61);
     box-shadow: 0 0 2px #ccc;
     overflow: hidden;
-    width: 50%;
+    width: 65%;
 }
 
 header > section > article > div.subtitulo > div.calendario > h2 {
@@ -76,13 +76,13 @@ header > section > article > div.subtitulo > div.calendario > div.semana, div.di
     background: #ba7e1e85;
     padding: 6px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 9.5px;
 }
 
 .dias div {
-    padding: 10px;
+    padding: 10px 0.5px;
     border: 1px solid #ddd;
-    font-size: 10.5px;
+    font-size: 9px;
 }
 
 .romantico {
@@ -99,7 +99,7 @@ header > section > article > div.subtitulo > div.calendario > div.semana, div.di
     position: absolute;
     right: -4px;
     bottom: 0px;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 @keyframes pulse {
@@ -112,9 +112,60 @@ header > section > article > div.subtitulo > div.calendario > div.semana, div.di
 }
 
 header > section > article > div.subtitulo > div.texto {
-    width: 50%;
+    width: 33%;
     color: white;
-    padding: 10px;
+    padding: 10px 0px 0px 10px;
     font-family: 'Dancing Script', cursive;
-    font-size: 20.5px;
+    font-size: 13px;
+}
+
+main {
+    background-image: linear-gradient(to bottom, #545c540e ,#191414);
+    display: flex;
+    height: 80vh;
+    margin: 350px 0px 0px;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+main > div#faixa {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espaço entre a capa e o texto */
+    padding: 10px;
+    margin-left: 20px;
+    width: 90%;
+    max-width: 400px; /* pode ajustar conforme necessário */
+    background-color: #1e1e1e; /* cor de fundo tipo Spotify */
+    color: white;
+    border-radius: 8px;
+}
+
+main > div#faixa > div.capa {
+    width: 50px;
+    height: 50px;
+    background-color: #555; /* cor de fundo temporária para a capa */
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+main > div#faixa > div.capa > img.imagens-capa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main > div#faixa > div.info-musica > p.titulo {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+footer {
+    background-color: #1db954a9;
+    padding: 15px;
+}
+footer > p {
+    color: white;
+    text-align: center;
 }
