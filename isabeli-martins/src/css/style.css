@@ -8,6 +8,7 @@
 
 body {
     height: 100vh;
+    width: 100vw;
     background-image: linear-gradient(to bottom, #1DB954 20%, #191414 80%);
     background-repeat: no-repeat;
 }
