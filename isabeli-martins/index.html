@@ -8,6 +8,8 @@
     <link rel="icon" href="src/img/spotify.svg" type="image/svg+xml">
     <link rel="alternate icon" href="src/img/spotify.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 
 </head>
@@ -42,43 +44,57 @@
         </section>
     </header>
     <main>
-        <div id="faixa">
+        <div class="faixa" onclick="tocarMusica(this, 'src/audio/musica1.m4a')">
             <div class="capa"><img src="src/img/img1.jpg" alt="Foto 1" class="imagens-capa"></div>
             <div class="info-musica">
                 <p class="titulo">Onde anda Você - Cover 2025</p>
             </div>
         </div>
-        <div id="faixa">
+        <div class="faixa" onclick="tocarMusica(this, 'src/audio/musica2.m4a')">
             <div class="capa"><img src="src/img/img2.jpg" alt="Foto 2" class="imagens-capa"></div>
             <div class="info-musica">
                 <p class="titulo">Final Feliz - Cover 2025</p>
             </div>
         </div>
-        <div id="faixa">
+        <div class="faixa" onclick="tocarMusica(this, 'src/audio/musica3.m4a')">
             <div class="capa"><img src="src/img/img3.jpg" alt="Foto 3" class="imagens-capa"></div>
             <div class="info-musica">
                 <p class="titulo">Ela une todas as coisas - Cover 2025</p>
             </div>
         </div>
-        <div id="faixa">
+        <div class="faixa" onclick="tocarMusica(this, 'src/audio/musica4.m4a')">
             <div class="capa"><img src="src/img/img4.jpg" alt="Foto 4" class="imagens-capa"></div>
             <div class="info-musica">
                 <p class="titulo">Chega de Saudade - Cover 2025</p>
             </div>
         </div>
-        <div id="faixa">
+        <div class="faixa" onclick="tocarMusica(this, 'src/audio/musica5.m4a')">
             <div class="capa"><img src="src/img/img5.jpg" alt="Foto 5" class="imagens-capa"></div>
             <div class="info-musica">
                 <p class="titulo">João e Maria - Cover 2025</p>
             </div>
         </div>
-        <div id="faixa">
+        <div class="faixa" onclick="tocarMusica(this, 'src/audio/musica6.m4a')">
             <div class="capa"><img src="src/img/img6.jpg" alt="Foto 6" class="imagens-capa"></div>
             <div class="info-musica">
                 <p class="titulo">Best Part - Cover 2025</p>
             </div>
         </div>
 
+        <audio id="player" controls style="display: none;"></audio>
+
+        <div id="player-controles">
+            <div class="tempo">
+                <span id="tempo-atual">0:00</span>
+                <input type="range" id="barra-progresso" value="0" step="1">
+                <span id="tempo-duracao">0:00</span>
+            </div>
+            <div class="botoes">
+                <i class="fas fa-step-backward" id="btn-anterior"></i>
+                <i class="fas fa-play" id="btn-play"></i>
+                <i class="fas fa-step-forward" id="btn-proximo"></i>
+            </div>
+        </div>
     </main>
 
     <footer>
